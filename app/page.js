@@ -10,7 +10,7 @@ export default function Home() {
   const messagesEndRef = useRef(null)
 
   useEffect(() => {
-    const newSocket = io('http://localhost:3000', {
+    const newSocket = io(window.location.origin, {
       transports: ['websocket', 'polling']
     })
 
